@@ -123,28 +123,28 @@ export default function HomePage() {
       </section>
 
       {/* Network Access Info */}
-      <section className="bg-gray-900 text-white py-8">
+      <section className="bg-gray-900 text-white py-10">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h3 className="text-lg font-semibold mb-2">🌐 多设备访问</h3>
-          <p className="text-gray-400 text-sm mb-3">
-            该网站已在局域网中开放，同一网络下的其他设备可通过以下地址访问：
+          <h3 className="text-xl font-bold mb-2">🌐 全球任意设备均可访问</h3>
+          <p className="text-gray-400 text-sm mb-4">
+            网站通过公网隧道发布，无论身处何地、使用何种设备（电脑/手机/平板），均可通过以下地址访问：
           </p>
-          <div className="inline-flex items-center gap-3 bg-gray-800 rounded-lg px-6 py-3">
-            <code className="text-green-400 text-lg font-mono" id="network-url">
-              http://{typeof window !== 'undefined' ? window.location.hostname : 'localhost'}:5173
-            </code>
-            <button
-              onClick={() => {
-                const url = `http://${window.location.hostname}:5173`
-                navigator.clipboard?.writeText(url)
-              }}
-              className="text-xs bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded transition-colors"
-            >
-              复制地址
-            </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <div className="bg-gray-800 rounded-xl p-4">
+              <div className="text-xs text-gray-500 mb-1">📡 局域网地址（同WiFi下）</div>
+              <code className="text-green-400 text-base font-mono break-all">
+                {typeof window !== 'undefined' ? `http://${window.location.hostname}:${window.location.port || 9876}` : 'http://192.168.1.48:9876'}
+              </code>
+            </div>
+            <div className="bg-gray-800 rounded-xl p-4">
+              <div className="text-xs text-gray-500 mb-1">🌍 公网地址（任何网络均可）</div>
+              <code className="text-blue-400 text-base font-mono break-all">
+                {typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? `https://${window.location.hostname}` : '运行 start-public.sh 获取公网URL'}
+              </code>
+            </div>
           </div>
-          <p className="text-gray-500 text-xs mt-3">
-            手机、平板、其他电脑均可通过浏览器访问，无需安装任何应用
+          <p className="text-gray-500 text-xs mt-4">
+            手机、平板、电脑均可通过浏览器访问 · 无需安装任何应用 · 完全免费
           </p>
         </div>
       </section>
