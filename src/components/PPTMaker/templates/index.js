@@ -11,8 +11,11 @@ import { natureTemplates } from './nature'
 import { cultureTemplates } from './culture'
 import { competitionTemplates } from './competition'
 import { internetTemplates } from './internet'
+import { wpsPremiumTemplates } from './wps-premium'
 
 export const allTemplates = [
+  // WPS精选放在最前面
+  ...wpsPremiumTemplates,
   ...businessTemplates,
   ...educationTemplates,
   ...marketingTemplates,
@@ -29,6 +32,7 @@ export const allTemplates = [
 ]
 
 export const categories = [
+  { key: 'WPS精选', name: 'WPS精选', emoji: '⭐', count: wpsPremiumTemplates.length, templates: wpsPremiumTemplates },
   { key: '商务', name: '商务', emoji: '🏢', count: businessTemplates.length, templates: businessTemplates },
   { key: '教育', name: '教育', emoji: '📚', count: educationTemplates.length, templates: educationTemplates },
   { key: '营销', name: '营销', emoji: '📢', count: marketingTemplates.length, templates: marketingTemplates },

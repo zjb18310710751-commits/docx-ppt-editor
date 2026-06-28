@@ -41,7 +41,7 @@ export default function HomePage() {
             <span className="block text-blue-200 text-2xl md:text-3xl font-normal mt-3">一站式在线创作平台</span>
           </h1>
           <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">
-            强大的富文本文档编辑器 + 60套精美PPT模板 + 免费PDF转Word，让你的创意完美呈现。完全免费，无需安装，打开即用。
+            强大的富文本文档编辑器 + 76套精美PPT模板（含WPS精选）+ 免费PDF转Word，让你的创意完美呈现。完全免费，无需安装，打开即用。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -82,7 +82,7 @@ export default function HomePage() {
       {/* Template Categories Preview */}
       <section className="bg-white py-20 border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">13大类 · 60套精美模板</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">⭐ 14大类 · 76套精美模板（WPS精选16套 + 常规60套）</h2>
           <p className="text-gray-500 text-center mb-12">覆盖商务、教育、科技、创意等所有主流场景</p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {templateCategories.map(({ name, emoji, count, desc }) => (

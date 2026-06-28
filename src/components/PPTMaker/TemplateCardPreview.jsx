@@ -15,6 +15,7 @@ const categoryConfig = {
   '文化艺术': { shapes: 'curves', angles: [0, -3, 5], grid: [2, 3], accentStyle: 'gradient' },
   '竞赛答辩': { shapes: 'triangles', angles: [45, 0, -45], grid: [3, 3], accentStyle: 'burst' },
   '互联网': { shapes: 'dots', angles: [0, 0, 0], grid: [4, 4], accentStyle: 'data' },
+  'WPS精选': { shapes: 'diamonds', angles: [0, 0, 0], grid: [3, 2], accentStyle: 'elegant' },
 }
 
 // 为各模板预定义的独特迷你图案
@@ -59,6 +60,21 @@ const patternStyles = {
   '商业计划书': { accent: 'growthArrow', overlay: 'lightGrid' },
   '银行报告': { accent: 'columnGraph', overlay: 'diagonalLines' },
   '加密货币': { accent: 'bitcoinCircle', overlay: 'blockchainDots' },
+  // WPS精选
+  '黑金商务': { accent: 'goldLines', overlay: 'centeredDiamond' },
+  '星空蓝': { accent: 'globeDots', overlay: 'sideAccent' },
+  '莫兰迪绿': { accent: 'leafAccent', overlay: 'softGrid' },
+  '玫瑰金': { accent: 'gradientBar', overlay: 'floatingCircles' },
+  '碳纤维': { accent: 'neonGlow', overlay: 'matrixRain' },
+  '质感杂志': { accent: 'redBlock', overlay: 'colorBlocks' },
+  '几何蒙德里安': { accent: 'colorBlocks', overlay: 'gridSystem' },
+  '极简留白': { accent: 'thinLine', overlay: 'geometricSquare' },
+  '孟菲斯风格': { accent: 'paintSplash', overlay: 'prismDots' },
+  '水墨江南': { accent: 'verticalRule', overlay: 'bambooStripe' },
+  '故宫红墙': { accent: 'goldBorder', overlay: 'cornerTriangle' },
+  '青花瓷': { accent: 'blueWave', overlay: 'dotGrid' },
+  '麦肯锡蓝': { accent: 'columnGraph', overlay: 'gridBackground' },
+  '罗兰贝格': { accent: 'growthArrow', overlay: 'diagonalLines' },
 }
 
 // 迷你图案渲染器

@@ -36,8 +36,8 @@ export default function PDFToWord() {
       setResult({ type: 'error', message: '请选择 PDF 文件' })
       return
     }
-    if (selectedFile.size > 50 * 1024 * 1024) {
-      setResult({ type: 'error', message: '文件大小不能超过 50MB' })
+    if (selectedFile.size > 5000 * 1024 * 1024) {
+      setResult({ type: 'error', message: '文件大小不能超过 5000MB (5GB)' })
       return
     }
     setFile(selectedFile)
@@ -165,7 +165,8 @@ export default function PDFToWord() {
           />
           <Upload size={56} className="mx-auto text-gray-300 mb-4" />
           <h3 className="text-xl font-semibold text-gray-700 mb-2">点击或拖拽 PDF 文件到此处</h3>
-          <p className="text-gray-400 text-sm">支持最大 50MB 的 PDF 文件</p>
+          <p className="text-gray-400 text-sm">支持最大 5000MB (5GB) 的 PDF 文件</p>
+          <p className="text-gray-300 text-xs mt-1">大文件转换可能耗时较长，请耐心等待</p>
         </div>
       )}
 
